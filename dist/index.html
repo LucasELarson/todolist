@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>TODO LIST</title>
+   <script src="main.js"></script>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div id="container">
+      <div id="navcolumn">
+         <div id="projectstitle">
+            <h1>PROJECTS</h1>
+         </div>
+         <div class="line"></div>    
+         <div id="projectlist">    
+            <div id="project">
+               <div id="pp" class="pp">
+                  <label class="radio">
+                     <input type="radio" checked="checked" name="radio">
+                     <span class="checkmark"></span>
+                   </label>
+                   Clean Garage
+               </div>
+            </div>            
+         </div>
+         <div id="prjmng">
+            <input type="text" id="textinput">
+            <button id="addproj">ADD</button>
+            <button id="remproj" >REMOVE</button>
+         </div>
+      </div>  
+      <div id="todoitems">
+         <div id="todotitle">
+            <h1>TO DO</h1>
+         </div>
+         <div id="todoline" class="line"></div>
+         <div id="todolist">
+            <div id="todo">               
+               <div id="td" class="td">
+                     <input type="checkbox" name="check" class="checkbox" id="">
+                     <h5>Empty Out The Oil</h5>
+                     <input type="datetime-local" name="date" id="date">
+               </div>
+            </div>
+         </div>
+         <div id="todomng">
+            <button id="addtodo">ADD</button>
+            <button id="remtodo">REMOVE</button>    
+         </div>
+      </div>
+   </div>
+</body>
+</html>
