@@ -50,7 +50,7 @@ setTimeout(() => {
          x.style.display = "none";
          y.style.display = "none";
          todoInput.value = "";
-         tdName.innerHTML = "Edit To Dos";
+         tdName.innerHTML = "Edit ToDos";
       }
    });
    const tdNameClose = document.querySelector("#remtodo");
