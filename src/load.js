@@ -1,4 +1,3 @@
-let projName;
 let makeTodoList;
 let todoItems;
 let tdName;
@@ -6,7 +5,7 @@ let tdName;
 // creates a project //
 export function addProj() {
    const todoTitle = document.querySelector("#tdtitle");
-   projName = document.getElementById("inputinput").value;
+   const projName = document.getElementById("inputinput").value;
    todoItems = document.getElementById("todoitems");
 
    const projects = document.getElementById("project");
@@ -88,6 +87,39 @@ export function addTodo() {
          item.appendChild(todolist);
       } else {
          console.log("it no equal");
+      }
+   }
+}
+
+// remove a project and all of its todos //
+export function removeProj() {
+   const projName = document.getElementById("inputinput").value;
+   const proj = document.getElementsByClassName("pp");
+   for (const item of proj) {
+      if (item.innerText === projName) {
+         item.remove();
+         const list = document.getElementsByClassName("item");
+         for (const tos of list) {
+            if (String(tos.classList.value) === String(projName + " item")) {
+               tos.remove();
+            } else {
+               console.log("it no equal");
+            }
+         }
+      } else {
+         console.log("no match");
+      }
+   }
+}
+
+export function removeTodo() {
+   const tdH5 = document.getElementById("tdinputinput").value;
+   const tdItem = document.getElementsByClassName("td");
+   for (const item of tdItem) {
+      if (item.innerText === tdH5) {
+         item.remove();
+      } else {
+         console.log("trying next");
       }
    }
 }
